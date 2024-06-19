@@ -7,7 +7,7 @@ const currentSize = document.createElement("h3");
 const adjust = document.createElement("button");
 const reset = document.createElement("button");
 
-let size = 12;
+let size = 16;
 
 function createGrid(size) {
   const grid = document.createElement("div");
