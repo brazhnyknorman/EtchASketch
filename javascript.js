@@ -7,9 +7,7 @@ const currentSize = document.createElement("h3");
 const adjust = document.createElement("button");
 const reset = document.createElement("button");
 
-adjust.style.color = randomColor();
-
-let size = 20;
+let size = 12;
 
 function createGrid(size) {
   const grid = document.createElement("div");
@@ -71,12 +69,13 @@ adjust.addEventListener('click', function(onClick) {
   
   currentSize.textContent = size + " x " + size;
 
+  /* Create new grid */
   container = createGrid(size);
   container.classList.add("container");
   body.appendChild(container);
 });
 
-/* Color Square */
+/* Generate Random Color */
 function randomColor(min = 100, max = 256) {
   let red = Math.floor(Math.random() * (max - min) + min);
   let green = Math.floor(Math.random() * (max - min) + min);
@@ -86,8 +85,13 @@ function randomColor(min = 100, max = 256) {
   return output;
 }
 
+/* Reset colors of all squares */
 reset.addEventListener('click', function(onClick) {
-
+  let squares = Array.from(document.querySelectorAll(".square"));
+  squares.forEach(square => {
+    square.classList.remove("colored");
+    square.style.backgroundColor = "rgb(255 255 255)";
+  });
 });
 
 

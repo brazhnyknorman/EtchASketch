@@ -30,15 +30,11 @@ body {
 }
 
 .square , .colored{
-  border: 3px solid darkblue;
+  border: 3px solid rgb(66, 66, 66);
   margin-right: -3px; /* Adjust the margin to overlap the border */
   margin-top: -3px;
 
   flex: 1;
-}
-
-.square:last-child {
-  margin-right: 0; /* Remove the negative margin from the last square */
 }
 
 /* OPTIONS */
