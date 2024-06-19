@@ -1,27 +1,50 @@
 body {
   display: flex;
   flex-direction: column;
-  
+
   justify-content: center;
   align-items: center;
-}
-
-.header {
-  text-align: center;
 }
 
 .container {
-  border: 5px solid black;
-  height: 500px;
-  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space rows evenly */
+  
+  width: 550px;
+  height: 550px;
+}
+
+.subContainer {
+  margin-top: -10px;
+  margin-bottom: 20px;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
+  gap: 15px;
 }
 
-.square {
-  border: 5px solid blue;
-  height: 50px;
-  width: 50px;
+.row {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
 }
+
+.square , .colored{
+  border: 3px solid darkblue;
+  margin-right: -3px; /* Adjust the margin to overlap the border */
+  margin-top: -3px;
+
+  flex: 1;
+}
+
+.square:last-child {
+  margin-right: 0; /* Remove the negative margin from the last square */
+}
+
+/* OPTIONS */
+h3, h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
